@@ -53,7 +53,7 @@ const Header = ({ showHero = true }) => {
     localStorage.removeItem("user");
     localStorage.removeItem("role");
     window.dispatchEvent(new Event("authchange"));
-    navigateTo("/");
+    navigateTo("/login");
   };
 
   const isActive = (path) => location.pathname === path;

@@ -71,6 +71,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('token');
     localStorage.removeItem('role');
     localStorage.removeItem('user');
+    window.location.href = '/test_giftshop/login';
   };
 
   const markAsExistingUser = () => {
