@@ -12,7 +12,7 @@ import giftImage from "../assets/gift.png";
 
 const Login = () => {
   const navigate = useNavigate();
-  const location = useLocation(); // ✅ FIX ADDED
+  const location = useLocation();
   const { login } = useAuth();
 
   const [formData, setFormData] = useState({
@@ -31,7 +31,11 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${apiBaseUrl}/login`, {
+      // ✅ Admin check by email
+      const isAdmin = formData.email === "admin@gmail.com";
+      const endpoint = isAdmin ? "/admin" : "/userlogin";
+
+      const response = await fetch(`${apiBaseUrl}${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -44,7 +48,7 @@ const Login = () => {
         return;
       }
 
-      // Save in localStorage
+      // ✅ Store auth data
       if (data.token) localStorage.setItem("token", data.token);
       if (data.user) localStorage.setItem("user", JSON.stringify(data.user));
       if (data.user?.role) localStorage.setItem("role", data.user.role);
@@ -53,17 +57,15 @@ const Login = () => {
 
       const role = data.user?.role;
 
-      const userData = {
+      login({
         ...data.user,
         token: data.token,
         role: role,
-      };
-
-      login(userData);
+      });
 
       alert("Login successful");
 
-      // 🔥 IMPORTANT FIX (checkout return support)
+      // ✅ Redirect
       const from = location.state?.from || "/";
 
       if (role === "admin") {
@@ -90,7 +92,10 @@ const Login = () => {
           <div className="auth-formBox">
 
             <h2>
-              <i className="fa fa-sign-in" /> Login
+              <i className="fa fa-sign-in" />{" "}
+              {formData.email === "admin@gmail.com"
+                ? "Admin Login"
+                : "Login"}
             </h2>
 
             <form onSubmit={handleSubmit}>

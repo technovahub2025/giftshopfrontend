@@ -139,7 +139,7 @@ function AppContent() {
 }
 
 function App() {
-  const basename = process.env.PUBLIC_URL || "/";
+  const basename = process.env.PUBLIC_URL || "/test_giftshop";
 
   return (
     <BrowserRouter basename={basename}>
