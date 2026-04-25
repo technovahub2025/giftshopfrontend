@@ -1,0 +1,118 @@
+.header {
+  width: 100%;
+  height: 500px;
+  background: rgba(242, 218, 92, 0.83);
+  position: relative;
+  overflow: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.gift {
+  font-family: 'Italianno';
+  font-size: 40px;
+  color: #F30DC1;
+  margin-right: 5px;
+}
+
+.shop {
+  font-family: 'Itim';
+  font-size: 40px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links li {
+  font-family: 'Inter';
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-links .active {
+  color: rgba(243, 13, 193, 0.83);
+}
+
+/* RIGHT SECTION */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* CART */
+.cart {
+  position: relative;
+  font-size: 20px;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+/* SIGN IN BUTTON */
+.signin-btn {
+  background: rgba(243, 13, 193, 0.83);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100%;
+}
+
+/* EXPLORE BUTTON */
+.explore-btn {
+  position: absolute;
+  left: 60px;
+  bottom: 40px;
+  background: rgba(243, 13, 193, 0.83);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* IMAGES */
+.img1 {
+  position: absolute;
+  right: 80px;
+  bottom: 20px;
+  width: 300px;
+}
+
+.img2 {
+  position: absolute;
+  right: 250px;
+  top: 80px;
+  width: 250px;
+}

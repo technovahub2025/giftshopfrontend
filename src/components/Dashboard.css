@@ -1,0 +1,161 @@
+.welcome-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(242, 218, 92, 0.3) 0%, rgba(243, 13, 193, 0.3) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.welcome-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.welcome-header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 30px;
+}
+
+.welcome-header .logo-gift {
+  font-family: 'Italianno', cursive;
+  font-size: 40px;
+  line-height: 50px;
+  color: rgba(243, 13, 193, 0.83);
+}
+
+.welcome-header .logo-shop {
+  font-family: 'Itim', cursive;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.welcome-header h2 {
+  font-family: 'Aclonica', sans-serif;
+  font-size: 32px;
+  line-height: 36px;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.welcome-header p {
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.welcome-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.feature-item {
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: rgba(243, 13, 193, 0.83);
+}
+
+.feature-item h3 {
+  font-family: 'Aclonica', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.feature-item p {
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #666;
+}
+
+.continue-btn {
+  background: rgba(243, 13, 193, 0.83);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 40px;
+  font-family: 'Aclonica', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.continue-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(243, 13, 193, 0.95);
+}
+
+.logout-btn {
+  background: transparent;
+  color: rgba(243, 13, 193, 0.83);
+  border: 2px solid rgba(243, 13, 193, 0.83);
+  border-radius: 10px;
+  padding: 12px 30px;
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.logout-btn:hover {
+  background: rgba(243, 13, 193, 0.83);
+  color: white;
+}
+
+.dashboard {
+  min-height: 100vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-card {
+    padding: 30px 20px;
+  }
+  
+  .welcome-header h2 {
+    font-size: 28px;
+  }
+  
+  .welcome-features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .feature-icon {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,119 @@
+.infoPage {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.infoMain .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 26px 16px 56px;
+}
+
+.infoHeader {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.infoTitle {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 900;
+  color: #1f2430;
+}
+
+.infoSubtitle {
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.infoCard {
+  margin-top: 14px;
+  background: #fff;
+  border: 1px solid rgba(31, 36, 48, 0.08);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(18, 21, 26, 0.06);
+}
+
+.infoCard h3 {
+  margin: 0 0 8px;
+  color: #1f2430;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.infoCard p,
+.infoCard li {
+  color: rgba(0, 0, 0, 0.78);
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.infoCard ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.infoBtn {
+  appearance: none;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 900;
+  cursor: pointer;
+  background: linear-gradient(135deg, #7048e8, #ff4d6d);
+  color: #fff;
+}
+
+.infoBtn.is-secondary {
+  background: #1f2430;
+}
+
+.infoLinkRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.infoField {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.infoLabel {
+  font-size: 13px;
+  color: #4b5563;
+  font-weight: 800;
+}
+
+.infoInput,
+.infoTextarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(31, 36, 48, 0.14);
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.infoTextarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+@media (max-width: 860px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,145 @@
+.auth-root,
+.auth-root * {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.auth-root {
+  height: 100vh;
+}
+
+.auth-container {
+  display: flex;
+  height: 100%;
+}
+
+/* Left Image */
+.auth-left {
+  flex: 1;
+}
+
+.auth-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Form */
+.auth-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+}
+
+.auth-formBox {
+  width: 400px;
+  padding: 30px;
+  background: rgba(217, 217, 217, 0.6);
+  border-radius: 20px;
+  box-shadow: inset 0 4px 40px #ffd708;
+  text-align: center;
+}
+
+.auth-formBox h2 {
+  color: #f30dc1;
+  margin-bottom: 20px;
+}
+
+.auth-inputBox {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.auth-leftIcon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.auth-rightIcon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+}
+
+.auth-inputBox input {
+  width: 100%;
+  padding: 12px 45px 12px 40px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ffd708;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.auth-btn:hover {
+  opacity: 0.9;
+}
+
+.auth-loginText {
+  margin-top: 15px;
+}
+
+.auth-link {
+  color: #f30dc1;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.auth-forgotPassword {
+  width: 100%;
+  text-align: right;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.auth-forgotPassword span {
+  color: #f30dc1;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.auth-forgotPassword span:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-left {
+    height: 240px;
+  }
+
+  .auth-root {
+    height: auto;
+    min-height: 100vh;
+  }
+}
