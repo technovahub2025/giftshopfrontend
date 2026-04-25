@@ -2,7 +2,8 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "/test_giftshop/static/(.*)", "dest": "/static/$1" },
-    { "src": "/test_giftshop/(.*)", "dest": "/$1" },
+    { "src": "/test_giftshop", "dest": "/index.html" },
+    { "src": "/test_giftshop/(.*)", "dest": "/index.html" },
     { "src": "/.*", "dest": "/index.html" }
   ]
 }
