@@ -49,7 +49,10 @@ function ProtectedRoute({ children, requireAdmin = false }) {
 function AppContent() {
   const { user, isLoading } = useAuth(); // ✅ Needed for login redirect
 
+  console.log('AppContent - user:', user, 'isLoading:', isLoading, 'pathname:', window.location.pathname);
+
   if (isLoading) {
+    console.log('AppContent - showing loading spinner');
     return (
       <div className="loading-container">
         <div className="loading-spinner">
@@ -75,12 +78,8 @@ function AppContent() {
       {/* 🏠 Dashboard (PUBLIC) */}
       <Route path="/" element={<Dashboard />} />
 
-      {/* 🔒 Protected routes */}
-      <Route path="/products" element={
-        <ProtectedRoute>
-          <ProductsPage />
-        </ProtectedRoute>
-      } />
+      {/* 🌍 Public routes */}
+      <Route path="/products" element={<ProductsPage />} />
 
       <Route path="/cart" element={
         <ProtectedRoute>
@@ -106,35 +105,12 @@ function AppContent() {
         </ProtectedRoute>
       } />
 
-      <Route path="/about" element={
-        <ProtectedRoute>
-          <AboutPage />
-        </ProtectedRoute>
-      } />
-
-      <Route path="/privacy" element={
-        <ProtectedRoute>
-          <PrivacyPolicyPage />
-        </ProtectedRoute>
-      } />
-
-      <Route path="/terms" element={
-        <ProtectedRoute>
-          <TermsPage />
-        </ProtectedRoute>
-      } />
-
-      <Route path="/contact" element={
-        <ProtectedRoute>
-          <ContactPage />
-        </ProtectedRoute>
-      } />
-
-      <Route path="/testimonials" element={
-        <ProtectedRoute>
-          <TestimonialsPage />
-        </ProtectedRoute>
-      } />
+      {/* 🌍 Public routes */}
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/privacy" element={<PrivacyPolicyPage />} />
+      <Route path="/terms" element={<TermsPage />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/testimonials" element={<TestimonialsPage />} />
 
       {/* 👑 Admin route */}
       <Route path="/admin" element={

@@ -65,13 +65,16 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = () => {
+    console.log('AuthContext - logout called');
     setUser(null);
     localStorage.removeItem('giftShopUser');
     localStorage.removeItem('isNewUser');
     localStorage.removeItem('token');
     localStorage.removeItem('role');
     localStorage.removeItem('user');
-    window.location.reload();
+    console.log('AuthContext - localStorage cleared, redirecting to login');
+    // Force redirect to login without reload
+    window.location.href = window.location.origin + '/test_giftshop/login';
   };
 
   const markAsExistingUser = () => {

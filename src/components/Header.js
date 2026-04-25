@@ -49,11 +49,15 @@ const Header = ({ showHero = true }) => {
   };
 
   const handleLogout = () => {
+    console.log('Header - handleLogout called');
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     localStorage.removeItem("role");
+    localStorage.removeItem("giftShopUser");
+    localStorage.removeItem("isNewUser");
     window.dispatchEvent(new Event("authchange"));
-    navigateTo("/login");
+    console.log('Header - all localStorage cleared, redirecting to login');
+    window.location.href = window.location.origin + '/test_giftshop/login';
   };
 
   const isActive = (path) => location.pathname === path;
