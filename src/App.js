@@ -47,7 +47,18 @@ function ProtectedRoute({ children, requireAdmin = false }) {
 }
 
 function AppContent() {
-  const { user } = useAuth(); // ✅ Needed for login redirect
+  const { user, isLoading } = useAuth(); // ✅ Needed for login redirect
+
+  if (isLoading) {
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner">
+          <div className="spinner"></div>
+          <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <Routes>
